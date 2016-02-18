@@ -16,3 +16,9 @@ C:\Users\fiede\Desktop\daclient\dndazureClient\bin\dndazureClient.pdb
 C:\Users\fiede\Desktop\daclient\dndazureClient\obj\Debug\dndazureClient.csprojResolveAssemblyReference.cache
 C:\Users\fiede\Desktop\daclient\dndazureClient\obj\Debug\dndazureClient.dll
 C:\Users\fiede\Desktop\daclient\dndazureClient\obj\Debug\dndazureClient.pdb
+C:\Users\mike.fiedel\Desktop\daclient\dndazureClient\bin\dndazureClient.dll.config
+C:\Users\mike.fiedel\Desktop\daclient\dndazureClient\bin\dndazureClient.dll
+C:\Users\mike.fiedel\Desktop\daclient\dndazureClient\bin\dndazureClient.pdb
+C:\Users\mike.fiedel\Desktop\daclient\dndazureClient\obj\Debug\dndazureClient.csprojResolveAssemblyReference.cache
+C:\Users\mike.fiedel\Desktop\daclient\dndazureClient\obj\Debug\dndazureClient.dll
+C:\Users\mike.fiedel\Desktop\daclient\dndazureClient\obj\Debug\dndazureClient.pdb

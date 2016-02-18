@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 	<head>
 		<meta charset="utf-8">
@@ -19,11 +19,11 @@
 
 	<body ng-app="chatModule">
 		<div class="row" ng-controller="ChatController">
-			<div class="huge">name:message</div>
 			<ul id="discussion"></ul>
-			<input type="text" id="message" />
-			<input type="button" id="sendmessage" value="Send" />
-			<input type="hidden" id="displayname" />
+            <div class="ui input focus">
+                <input type="text" placeholder="Type your message..." id="message">
+            </div>
+            <button class="ui button" id="sendmessage">Send</button>
 		</div>
 	</body>
 

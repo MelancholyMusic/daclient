@@ -1,8 +1,8 @@
-﻿'use strict';
+'use strict';
 
 app.controller('ChatController', ['$scope', function($scope, ChatHubProxy)
 	{
-		$('#displayname').val(prompt('Enter your name:', ''));
+	    var displayName = prompt('Enter your name:', '');
 		console.log('Attempting to connect backendServerUrl=dndazureapi.azurewebsites.net hubName=ChatHub');
 		var connection = $.hubConnection('http://dndazureapi.azurewebsites.net/');
 		var chatHubProxy = connection.createHubProxy('ChatHub');
@@ -21,8 +21,8 @@ app.controller('ChatController', ['$scope', function($scope, ChatHubProxy)
 
 		$('#sendmessage').click(function()
 		{
-			console.log('Calling Send on chatHub name=' + $('#displayname').val()+ ' message=' + $('#message').val());
-			chatHubProxy.invoke('Send', $('#displayname').val(), $('#message').val())
+			console.log('Calling Send on chatHub name=' + displayName + ' message=' + $('#message').val());
+			chatHubProxy.invoke('Send', displayName, $('#message').val())
 				.done(function() { console.log('Invocation of Send succeeded'); })
 				.fail(function(error) { console.log('Invocation of Send failed. ' + error) });
 
