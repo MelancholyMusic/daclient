@@ -2,8 +2,8 @@
 
 app.controller('ChatController', ['$scope', function($scope, ChatHubProxy)
 	{
-		console.log('Attempting to connect backendServerUrl=dndazure.azurewebsites.net hubName=ChatHub');
-		var connection = $.hubConnection('http://dndazure.azurewebsites.net/');
+		console.log('Attempting to connect backendServerUrl=dndazureapi.azurewebsites.net hubName=ChatHub');
+		var connection = $.hubConnection('http://dndazureapi.azurewebsites.net/');
 		var chatHubProxy = connection.createHubProxy('ChatHub');
 
 		chatHubProxy.on('addNewMessageToPage', function(name, message)
