@@ -1,30 +1,126 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml">
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>AngularJS - SignalR - ServiceDashboard</title>
-		<link rel="stylesheet" href="Content/semantic.min.css" />
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>dndazure - Web Chat Relay</title>
+	<link rel="stylesheet" href="Content/semantic.min.css" />
 
-		<script src="Scripts/jquery-1.8.1.js"></script>
-		<script src="Scripts/semantic.min.js"></script>
-		<script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
-		<script src="Scripts/angular.min.js"></script>
+	<script src="Scripts/jquery-1.8.1.js"></script>
+	<script src="Scripts/semantic.min.js"></script>
+	<script src="Scripts/jquery.signalR-2.2.0.min.js"></script>
+	<script src="Scripts/angular.min.js"></script>
 
-		<script src="app/app.js"></script>
-		<script src="app/services.js"></script>
-		<script src="app/controllers.js"></script>
-	</head>
+	<script src="app/app.js"></script>
+	<script src="app/services.js"></script>
+	<script src="app/controllers.js"></script>
 
-	<body ng-app="chatModule">
-		<div class="row" ng-controller="ChatController">
-			<ul id="discussion"></ul>
-            <div class="ui input focus">
-                <input type="text" placeholder="Type your message..." id="message">
-            </div>
-            <button class="ui button" id="sendmessage">Send</button>
+	<link rel="stylesheet" type="text/css" href="BaseStyle.css" />
+</head>
+
+<body ng-app="chatModule">
+	<!--Menu-->
+	<div class="ui fixed inverted menu">
+		<div class="ui container">
+			<a href="#" class="header item">
+				<!--<img class="logo" src="assets/images/logo.png">-->
+				dndazure
+			</a>
+			<a href="#" class="item">Home</a>
+			<div class="ui simple dropdown item">
+				Dropdown <i class="dropdown icon"></i>
+				<div class="menu">
+					<a class="item" href="#">Link Item</a>
+					<a class="item" href="#">Link Item</a>
+					<div class="divider"></div>
+					<div class="header">Header Item</div>
+					<div class="item">
+						<i class="dropdown icon"></i>
+						Sub Menu
+						<div class="menu">
+							<a class="item" href="#">Link Item</a>
+							<a class="item" href="#">Link Item</a>
+						</div>
+					</div>
+					<a class="item" href="#">Link Item</a>
+				</div>
+			</div>
 		</div>
-	</body>
+	</div>
+
+	<!--Header-->
+	<div class="ui main text container">
+		<h1 class="ui header">Chat Relay</h1>
+		<p>Type a message into the box and hit send to chat with others on the website</p>
+		<div class="ui divider"></div>
+	</div>
+
+	<!--Chat-->
+	<div class="ui inverted text container" style="height:400px; overflow-y:scroll;">
+		<div class="ui comments" id="discussion"></div>
+	</div>
+	<div class="ui inverted center aligned text container" ng-controller="ChatController">
+		<div class="ui input">
+			<input type="text" placeholder="Username" id="displayname">
+		</div>
+		<div class="ui input">
+			<input type="text" placeholder="Type your message..." id="message">
+		</div>
+		<button class="ui animated primary button" id="sendmessage">
+			<div class="visible content">Send</div>
+			<div class="hidden content">
+				<i class="right arrow icon"></i>
+			</div>
+		</button>
+	</div>
+
+	<!--Footer-->
+	<div class="ui inverted vertical footer segment">
+		<div class="ui center aligned container">
+			<div class="ui stackable inverted divided grid">
+				<div class="three wide column">
+					<h4 class="ui inverted header">Group 1</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">Link One</a>
+						<a href="#" class="item">Link Two</a>
+						<a href="#" class="item">Link Three</a>
+						<a href="#" class="item">Link Four</a>
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header">Group 2</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">Link One</a>
+						<a href="#" class="item">Link Two</a>
+						<a href="#" class="item">Link Three</a>
+						<a href="#" class="item">Link Four</a>
+					</div>
+				</div>
+				<div class="three wide column">
+					<h4 class="ui inverted header">Group 3</h4>
+					<div class="ui inverted link list">
+						<a href="#" class="item">Link One</a>
+						<a href="#" class="item">Link Two</a>
+						<a href="#" class="item">Link Three</a>
+						<a href="#" class="item">Link Four</a>
+					</div>
+				</div>
+				<div class="seven wide column">
+					<h4 class="ui inverted header">Footer Header</h4>
+					<p>Extra space for a call to action inside the footer that could help re-engage users.</p>
+				</div>
+			</div>
+			<div class="ui inverted section divider"></div>
+			<!--<img src="assets/images/logo.png" class="ui centered mini image">-->
+			<div class="ui horizontal inverted small divided link list">
+				<a class="item" href="#">Site Map</a>
+				<a class="item" href="#">Contact Us</a>
+				<a class="item" href="#">Terms and Conditions</a>
+				<a class="item" href="#">Privacy Policy</a>
+			</div>
+		</div>
+	</div>
+</body>
 
 </html>
